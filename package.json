@@ -1,0 +1,13 @@
+{
+  "name": "meridian-ats",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": ["client", "server"],
+  "scripts": {
+    "dev": "concurrently -k -n API,WEB -c green,blue \"npm run dev --workspace=server\" \"npm run dev --workspace=client\"",
+    "seed": "npm run seed --workspace=server"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
